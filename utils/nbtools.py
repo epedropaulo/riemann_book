@@ -4,7 +4,7 @@ Useful tools for running Clawpack from an IPython notebook.
 
 from __future__ import absolute_import
 from __future__ import print_function
-from IPython.core.display import display
+# from IPython.core.display import display
 try:
     from IPython.display import FileLink
 except:
@@ -49,7 +49,7 @@ def make_driver(args, env, outfile, verbose):
     if verbose or errors:
         local_file = FileLink(outfile)
         print("Done...  Check this file to see output:") 
-        display(local_file)
+        # display(local_file)
 
 def make_htmls(outfile=None, env=None, verbose=False, readme_link=True):
     """Perform 'make .htmls' and display link."""
@@ -63,7 +63,7 @@ def make_htmls(outfile=None, env=None, verbose=False, readme_link=True):
 
     if readme_link:
         print("See the README.html file for links to input files...")
-        display(FileLink('README.html'))
+        # display(FileLink('README.html'))
     
 def make_data(env=None, verbose=True):
     """Perform 'make data' and display link."""
@@ -122,7 +122,7 @@ def make_plots(label=None, env=None, verbose=True):
     if verbose:
         index_file = FileLink('%s/_PlotIndex.html' % plotdir)
         print("View plots created at this link:")
-        display(index_file)
+        # display(index_file)
 
     return plotdir
     
@@ -152,7 +152,7 @@ def make_all(label=None, env=None, verbose=True):
     if verbose:
         index_file = FileLink('%s/_PlotIndex.html' % plotdir)
         print("View plots created at this link:")
-        display(index_file)
+        # display(index_file)
 
     return plotdir
     
